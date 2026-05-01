@@ -269,10 +269,31 @@ flowchart TD
 
 | 項目 | 内容 |
 |------|------|
-| 接続先 | https://www.boatrace.jp |
 | 通信方式 | HTTPS（GET） |
 | データ形式 | lzh形式圧縮ファイル |
 | 文字コード（ダウンロード元） | Shift-JIS（CP932） |
+
+**ダウンロードURL形式**
+
+```
+https://www.boatrace.jp/static_extra/pc_static/download/data/kibetsu/fan{YY}{MM}.lzh
+```
+
+ファイル名の `{YY}` と `{MM}` は、指定年・期から以下のルールで導出する。
+
+| 期 | `{YY}`（西暦下2桁） | `{MM}` |
+|----|---------------------|--------|
+| 前期（1） | 指定年 − 1 の下2桁 | `10` |
+| 後期（2） | 指定年の下2桁 | `04` |
+
+**具体例**
+
+| 指定 | ダウンロードURL |
+|------|----------------|
+| 2025年 前期 | `https://www.boatrace.jp/static_extra/pc_static/download/data/kibetsu/fan2410.lzh` |
+| 2025年 後期 | `https://www.boatrace.jp/static_extra/pc_static/download/data/kibetsu/fan2504.lzh` |
+| 2024年 前期 | `https://www.boatrace.jp/static_extra/pc_static/download/data/kibetsu/fan2310.lzh` |
+| 2024年 後期 | `https://www.boatrace.jp/static_extra/pc_static/download/data/kibetsu/fan2404.lzh` |
 
 ### 6.3 ファイルシステム仕様
 
