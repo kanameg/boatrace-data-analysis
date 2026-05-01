@@ -296,7 +296,7 @@ flowchart TD
 
 ### 7.1 入力データ
 
-公式サイト（https://www.boatrace.jp/owpc/pc/extra/data/download.html）から提供される期別レーサーデータ（lzh形式）。ファイルレイアウトは公式のデータレイアウト仕様（https://www.boatrace.jp/owpc/pc/extra/data/layout.html）に従う。
+公式サイト（`https://www.boatrace.jp/owpc/pc/extra/data/download.html`）から提供される期別レーサーデータ（lzh形式）。ファイルレイアウトは公式のデータレイアウト仕様（`https://www.boatrace.jp/owpc/pc/extra/data/layout.html`）に従う。
 
 ### 7.2 選手情報スキーマ
 
@@ -381,7 +381,7 @@ flowchart TD
 | no_course_K0_count | 整数 | 2 | K0（機械故障・コース上）回数 |
 | no_course_K1_count | 整数 | 2 | K1（機械故障・コース外）回数 |
 
-> **注記**: 公式データレイアウト仕様（https://www.boatrace.jp/owpc/pc/extra/data/layout.html）にモーター番号・ボート番号の記載はなかったため、旧スキーマのそれらフィールドは削除した。元バイト数は実装時のパース処理の参考値であり、正確な開始位置は公式仕様を参照すること。
+> **注記**: 公式データレイアウト仕様（`https://www.boatrace.jp/owpc/pc/extra/data/layout.html`）にモーター番号・ボート番号の記載はなかったため、旧スキーマのそれらフィールドは削除した。元バイト数は実装時のパース処理の参考値であり、正確な開始位置は公式仕様を参照すること。
 
 ### 7.4 出力CSVフォーマット
 
