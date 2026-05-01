@@ -247,15 +247,15 @@ flowchart TD
 
 ```
 使用方法:
-  ./collect_racer_data.sh <year> <term>
+  ./racer_tracker.sh <year> <term>
 
 引数:
   year  : 収集対象の西暦年（4桁整数、例: 2025）
   term  : 収集対象の期（1=前期, 2=後期）
 
 例:
-  ./collect_racer_data.sh 2025 1   # 2025年前期のデータを収集
-  ./collect_racer_data.sh 2024 2   # 2024年後期のデータを収集
+  ./racer_tracker.sh 2025 1   # 2025年前期のデータを収集
+  ./racer_tracker.sh 2024 2   # 2024年後期のデータを収集
 
 終了コード:
   0 : 正常終了
@@ -278,7 +278,7 @@ flowchart TD
 
 ```
 <プロジェクトルート>/
-├── collect_racer_data.sh       # エントリーポイント（Bashスクリプト）
+├── racer_tracker.sh            # エントリーポイント（Bashスクリプト）
 ├── src/
 │   └── parse_racer_data.py     # データ抽出・整形・保存（Pythonスクリプト）
 ├── data/
