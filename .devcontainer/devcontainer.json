@@ -1,0 +1,23 @@
+{
+  "name": "Python Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "mechatroner.rainbow-csv", // Rainbow CSV extension for better CSV handling
+        "bierner.markdown-mermaid", // Mermaid support for Markdown
+        "ms-python.python",  // Python extension
+        "ms-python.black-formatter",  // Black Python formatter
+        "ms-python.isort",  // iSort Python formatter
+        "ms-toolsai.jupyter", // Jupyter extension
+        "github.copilot",  // GitHub Copilot
+        "github.copilot-chat",  // GitHub Copilot Chat
+        "ms-azuretools.vscode-docker"  // Docker extension
+      ]
+    }
+  },
+  "postCreateCommand": "python -m pip install --upgrade pip && python -m pip install -r requirements.txt"
+}
