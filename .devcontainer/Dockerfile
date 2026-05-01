@@ -6,6 +6,7 @@ ENV PYTHONUNBUFFERED=1
 
 # Install system packages and Claude Code in a single layer
 RUN apt-get update && apt-get install -y \
+    git \
     curl \
     fonts-ipaexfont \
     libopencv-dev \
