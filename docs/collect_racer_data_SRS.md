@@ -2,11 +2,11 @@
 
 | 項目 | 内容 |
 |------|------|
-| ドキュメントID | racer_tracker_SRS |
+| ドキュメントID | collect_racer_data_SRS |
 | バージョン | 1.0 |
 | 作成日 | 2026-05-01 |
 | ステータス | ドラフト |
-| 参照元 | racer_tracker_RPF.md |
+| 参照元 | collect_racer_data_RPF.md |
 
 ---
 
@@ -247,15 +247,15 @@ flowchart TD
 
 ```
 使用方法:
-  ./racer_tracker.sh <year> <term>
+  ./collect_racer_data.sh <year> <term>
 
 引数:
   year  : 収集対象の西暦年（4桁整数、例: 2025）
   term  : 収集対象の期（1=前期, 2=後期）
 
 例:
-  ./racer_tracker.sh 2025 1   # 2025年前期のデータを収集
-  ./racer_tracker.sh 2024 2   # 2024年後期のデータを収集
+  ./collect_racer_data.sh 2025 1   # 2025年前期のデータを収集
+  ./collect_racer_data.sh 2024 2   # 2024年後期のデータを収集
 
 終了コード:
   0 : 正常終了
@@ -299,9 +299,9 @@ https://www.boatrace.jp/static_extra/pc_static/download/data/kibetsu/fan{YY}{MM}
 
 ```
 <プロジェクトルート>/
-├── racer_tracker.sh            # エントリーポイント（Bashスクリプト）
+├── collect_racer_data.sh            # エントリーポイント（Bashスクリプト）
 ├── src/
-│   └── parse_racer_data.py     # データ抽出・整形・保存（Pythonスクリプト）
+│   └── process_racer_data.py   # データ抽出・整形・保存（Pythonスクリプト）
 ├── data/
 │   └── <year>_<term>/          # 出力ディレクトリ（例: 2025_1）
 │       ├── racer_info.csv      # 選手情報
@@ -450,4 +450,4 @@ https://www.boatrace.jp/static_extra/pc_static/download/data/kibetsu/fan{YY}{MM}
 
 | バージョン | 日付 | 変更内容 | 変更者 |
 |-----------|------|----------|--------|
-| 1.0 | 2026-05-01 | 初版作成（racer_tracker_RPF.md を基に作成） | — |
+| 1.0 | 2026-05-01 | 初版作成（collect_racer_data_RPF.md を基に作成） | — |
